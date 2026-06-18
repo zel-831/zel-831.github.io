@@ -1,0 +1,286 @@
+/* 基础样式：统一盒模型，减少浏览器默认样式差异 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  color: #1f2937;
+  line-height: 1.7;
+  background: #f5f7fb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 页面内容统一居中 */
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section-muted {
+  background: #eef4ff;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+h3 {
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* 顶部导航栏 */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar {
+  width: min(1100px, calc(100% - 32px));
+  min-height: 64px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  color: #4b5563;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* 首页介绍区域 */
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.hero-subtitle {
+  max-width: 680px;
+  margin-bottom: 28px;
+  font-size: 1.15rem;
+  color: #4b5563;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.button.primary {
+  color: #ffffff;
+  background: #2563eb;
+}
+
+.button.primary:hover {
+  background: #1d4ed8;
+}
+
+.button.secondary {
+  color: #2563eb;
+  background: #e0ebff;
+}
+
+.button.secondary:hover {
+  background: #d4e3ff;
+}
+
+/* 卡片与网格布局 */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.cards-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.project-card,
+.blog-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-link {
+  margin-top: auto;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.date {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.contact-list {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.contact-list li + li {
+  margin-top: 8px;
+}
+
+/* 页脚 */
+.site-footer {
+  padding: 28px 16px;
+  color: #6b7280;
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 手机端自适应 */
+@media (max-width: 760px) {
+  .section {
+    padding: 52px 0;
+  }
+
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 14px 0;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .hero {
+    min-height: 460px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

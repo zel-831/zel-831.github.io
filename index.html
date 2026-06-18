@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - 个人主页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="#home">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#blog">博客</a></li>
+        <li><a href="#contact">联系方式</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 个人简介区域 -->
+    <section id="home" class="hero section">
+      <div class="container hero-content">
+        <p class="eyebrow">Personal Homepage</p>
+        <h1>你好，我是 Your Name</h1>
+        <p class="hero-subtitle">计算机技术方向研究生，关注 AI、Agent、大规模群决策与 Web 开发。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">查看项目</a>
+          <a class="button secondary" href="#contact">联系我</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我区域 -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>关于我</h2>
+        <div class="card">
+          <p>
+            我是一名计算机技术方向研究生，目前主要关注人工智能 Agent、大规模群决策、
+            Web 应用开发以及科研论文阅读与复现。这个主页用于展示我的学习记录、项目实践和博客文章。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技术方向区域 -->
+    <section id="skills" class="section section-muted">
+      <div class="container">
+        <h2>技术方向</h2>
+        <div class="grid cards-grid">
+          <article class="card">
+            <h3>AI 与 Agent</h3>
+            <p>关注智能体系统、工具调用、多智能体协作和实际应用场景落地。</p>
+          </article>
+          <article class="card">
+            <h3>大规模群决策</h3>
+            <p>研究群体智能、决策机制、评价方法和复杂系统中的协同问题。</p>
+          </article>
+          <article class="card">
+            <h3>Web 开发</h3>
+            <p>使用 HTML、CSS、JavaScript 构建简洁、可维护、响应式的网页应用。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目展示区域 -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>项目展示</h2>
+        <div class="grid cards-grid">
+          <article class="card project-card">
+            <h3>旅游 Agent 项目</h3>
+            <p>一个面向旅游规划场景的 Agent 原型，支持行程建议、景点筛选和路线规划。</p>
+            <a href="#" class="text-link">查看详情</a>
+          </article>
+          <article class="card project-card">
+            <h3>桌面宠物项目</h3>
+            <p>一个轻量级桌面交互项目，用于练习界面设计、事件响应和用户体验优化。</p>
+            <a href="#" class="text-link">查看详情</a>
+          </article>
+          <article class="card project-card">
+            <h3>论文阅读与复现项目</h3>
+            <p>记录论文阅读笔记、核心方法梳理、实验复现过程和结果分析。</p>
+            <a href="#" class="text-link">查看详情</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 博客文章入口区域 -->
+    <section id="blog" class="section section-muted">
+      <div class="container">
+        <h2>博客文章</h2>
+        <div class="grid cards-grid">
+          <article class="card blog-card">
+            <p class="date">学习笔记</p>
+            <h3>Git 常用命令整理</h3>
+            <p>整理日常开发中常用的 Git 命令，适合新手快速查阅。</p>
+            <a href="#" class="text-link">阅读全文</a>
+          </article>
+          <article class="card blog-card">
+            <p class="date">建站记录</p>
+            <h3>GitHub Pages 搭建个人博客</h3>
+            <p>记录从创建仓库到发布静态页面的完整流程。</p>
+            <a href="#" class="text-link">阅读全文</a>
+          </article>
+          <article class="card blog-card">
+            <p class="date">学习路线</p>
+            <h3>AI 研发岗学习路线</h3>
+            <p>梳理 AI 研发方向需要掌握的基础知识、工程能力和项目经验。</p>
+            <a href="#" class="text-link">阅读全文</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式区域 -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>联系方式</h2>
+        <div class="card contact-card">
+          <p>如果你对我的项目或研究方向感兴趣，欢迎通过以下方式联系我。</p>
+          <ul class="contact-list">
+            <li>邮箱：your.email@example.com</li>
+            <li>GitHub：<a href="#" class="text-link">https://github.com/yourname</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
