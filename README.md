@@ -1,4 +1,4 @@
-# 一泠技术个人主页
+# 一波N折个人主页
 
 这是一个用于部署到 GitHub Pages 的个人主页项目。页面风格参考了 `hugoplate-main` 模板的简洁导航、大标题首页、图文 Feature Section、卡片列表和 Call To Action 区域。
 

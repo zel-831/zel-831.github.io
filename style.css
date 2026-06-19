@@ -40,6 +40,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 3px;
+}
+
 button {
   font: inherit;
 }
@@ -169,6 +175,10 @@ h3 {
 }
 
 .nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.nav-links a.is-active {
   color: var(--color-primary);
 }
 
@@ -415,6 +425,12 @@ h3 {
   border-radius: 8px;
   background: #ffffff;
   box-shadow: var(--shadow-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(37, 99, 235, 0.36);
+  transform: translateY(-4px);
 }
 
 .card-label {
