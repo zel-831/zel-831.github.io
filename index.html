@@ -4,33 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>一波N折 - 个人主页</title>
+  <meta name="description" content="一波N折的个人主页，展示 AI、Agent、大规模群决策与 Web 开发方向的学习记录、项目和博客文章。">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 顶部导航栏 -->
+  <!-- 顶部导航栏：参考 HugoPlate 的简洁导航风格 -->
   <header class="site-header">
-    <nav class="navbar">
-      <a class="logo" href="#home">一波N折</a>
-      <ul class="nav-links">
-        <li><a href="#home">首页</a></li>
-        <li><a href="#about">关于我</a></li>
-        <li><a href="#projects">项目</a></li>
-        <li><a href="#blog">博客</a></li>
-        <li><a href="#contact">联系方式</a></li>
+    <nav class="navbar container" aria-label="主导航">
+      <a class="brand js-scroll" href="#home" aria-label="返回首页">
+        <span class="brand-mark">Y</span>
+        <span>一泠技术</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="site-menu" class="nav-links">
+        <li><a class="js-scroll" href="#home">首页</a></li>
+        <li><a class="js-scroll" href="#about">关于我</a></li>
+        <li><a class="js-scroll" href="#projects">项目</a></li>
+        <li><a class="js-scroll" href="#blog">博客</a></li>
+        <li><a class="js-scroll" href="#contact">联系方式</a></li>
       </ul>
+
+      <a class="nav-button" href="https://github.com/zel-831" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <main>
-    <!-- 个人简介区域 -->
+    <!-- 首页英雄区：大标题、短介绍和插画是 HugoPlate 首页的核心结构 -->
     <section id="home" class="hero section">
-      <div class="container hero-content">
-        <p class="eyebrow">Personal Homepage</p>
-        <h1>你好，我是 一波N折</h1>
-        <p class="hero-subtitle">计算机技术方向研究生，关注 AI、Agent、大规模群决策与 Web 开发。</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">查看项目</a>
-          <a class="button secondary" href="#contact">联系我</a>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal Homepage</p>
+          <h1>你好，我是 一泠技术</h1>
+          <p class="hero-subtitle">
+            计算机技术方向研究生，关注 AI、Agent、大规模群决策与 Web 开发。
+            这里记录我的研究兴趣、项目实践和技术文章。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-scroll" href="#projects">查看项目</a>
+            <a class="btn btn-outline js-scroll" href="#blog">阅读博客</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="个人主页插画">
+          <img src="assets/images/banner.png" alt="桌面学习与开发插画">
         </div>
       </div>
     </section>
@@ -38,32 +60,95 @@
     <!-- 关于我区域 -->
     <section id="about" class="section">
       <div class="container">
-        <h2>关于我</h2>
-        <div class="card">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>关于我</h2>
           <p>
-            我是一名计算机技术方向研究生，目前主要关注人工智能 Agent、大规模群决策、
-            Web 应用开发以及科研论文阅读与复现。这个主页用于展示我的学习记录、项目实践和博客文章。
+            我目前围绕智能体系统、群体决策机制和 Web 工程实践持续学习，
+            希望把科研理解和工程实现结合起来，沉淀为可复用的项目与文章。
           </p>
+        </div>
+
+        <div class="about-layout">
+          <article class="about-card">
+            <h3>研究与实践方向</h3>
+            <p>
+              我关注 AI Agent 的任务分解、工具调用、多智能体协作，以及大规模群决策中的评价、
+              聚合和协同机制。同时也通过 Web 项目训练前端实现、交互设计和部署能力。
+            </p>
+          </article>
+
+          <div class="quick-facts" aria-label="个人信息摘要">
+            <div>
+              <span>身份</span>
+              <strong>计算机技术方向研究生</strong>
+            </div>
+            <div>
+              <span>研究方向</span>
+              <strong>AI / Agent / 群决策 / Web</strong>
+            </div>
+            <div>
+              <span>主页定位</span>
+              <strong>项目展示与技术博客</strong>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 技术方向区域 -->
-    <section id="skills" class="section section-muted">
+    <!-- 技术方向区域：参考 HugoPlate 的图文交替 Feature Section -->
+    <section id="skills" class="section section-gradient">
       <div class="container">
-        <h2>技术方向</h2>
-        <div class="grid cards-grid">
-          <article class="card">
-            <h3>AI 与 Agent</h3>
-            <p>关注智能体系统、工具调用、多智能体协作和实际应用场景落地。</p>
+        <div class="section-heading">
+          <p class="eyebrow">Focus</p>
+          <h2>技术方向</h2>
+          <p>围绕研究、开发和复现三个角度搭建自己的技术体系。</p>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature-item">
+            <div class="feature-image">
+              <img src="assets/images/service-1.png" alt="AI 与 Agent 插画">
+            </div>
+            <div class="feature-content">
+              <h3>AI 与 Agent</h3>
+              <p>关注智能体系统的任务规划、工具调用、记忆机制和多智能体协作。</p>
+              <ul class="check-list">
+                <li>Agent 应用原型设计</li>
+                <li>工具调用与工作流编排</li>
+                <li>多智能体协作实验</li>
+              </ul>
+            </div>
           </article>
-          <article class="card">
-            <h3>大规模群决策</h3>
-            <p>研究群体智能、决策机制、评价方法和复杂系统中的协同问题。</p>
+
+          <article class="feature-item feature-reverse">
+            <div class="feature-image">
+              <img src="assets/images/service-2.png" alt="大规模群决策插画">
+            </div>
+            <div class="feature-content">
+              <h3>大规模群决策</h3>
+              <p>研究群体偏好表达、决策聚合、共识达成和复杂系统协同问题。</p>
+              <ul class="check-list">
+                <li>群体智能与决策机制</li>
+                <li>评价指标与实验分析</li>
+                <li>论文阅读与方法复现</li>
+              </ul>
+            </div>
           </article>
-          <article class="card">
-            <h3>Web 开发</h3>
-            <p>使用 HTML、CSS、JavaScript 构建简洁、可维护、响应式的网页应用。</p>
+
+          <article class="feature-item">
+            <div class="feature-image">
+              <img src="assets/images/service-3.png" alt="Web 开发插画">
+            </div>
+            <div class="feature-content">
+              <h3>Web 开发</h3>
+              <p>使用 HTML、CSS 和原生 JavaScript 构建清晰、快速、易部署的静态页面。</p>
+              <ul class="check-list">
+                <li>响应式页面布局</li>
+                <li>纯静态 GitHub Pages 部署</li>
+                <li>技术博客与项目文档整理</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -72,64 +157,87 @@
     <!-- 项目展示区域 -->
     <section id="projects" class="section">
       <div class="container">
-        <h2>项目展示</h2>
-        <div class="grid cards-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>项目展示</h2>
+          <p>这些项目用于沉淀学习过程，也方便后续补充代码仓库和文章链接。</p>
+        </div>
+
+        <div class="card-grid">
           <article class="card project-card">
+            <p class="card-label">Agent</p>
             <h3>旅游 Agent 项目</h3>
-            <p>一个面向旅游规划场景的 Agent 原型，支持行程建议、景点筛选和路线规划。</p>
-            <a href="#" class="text-link">查看详情</a>
+            <p>面向旅游规划场景的 Agent 原型，支持行程建议、景点筛选和路线规划。</p>
+            <a class="text-link" href="#">查看详情</a>
           </article>
+
           <article class="card project-card">
+            <p class="card-label">Desktop App</p>
             <h3>桌面宠物项目</h3>
-            <p>一个轻量级桌面交互项目，用于练习界面设计、事件响应和用户体验优化。</p>
-            <a href="#" class="text-link">查看详情</a>
+            <p>轻量级桌面交互项目，用于练习界面设计、事件响应和用户体验优化。</p>
+            <a class="text-link" href="#">查看详情</a>
           </article>
+
           <article class="card project-card">
+            <p class="card-label">Research</p>
             <h3>论文阅读与复现项目</h3>
             <p>记录论文阅读笔记、核心方法梳理、实验复现过程和结果分析。</p>
-            <a href="#" class="text-link">查看详情</a>
+            <a class="text-link" href="#">查看详情</a>
           </article>
         </div>
       </div>
     </section>
 
     <!-- 博客文章入口区域 -->
-    <section id="blog" class="section section-muted">
+    <section id="blog" class="section section-light">
       <div class="container">
-        <h2>博客文章</h2>
-        <div class="grid cards-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Blog</p>
+          <h2>博客文章</h2>
+          <p>整理工具使用、建站过程和 AI 研发方向的学习路线。</p>
+        </div>
+
+        <div class="card-grid">
           <article class="card blog-card">
-            <p class="date">学习笔记</p>
+            <p class="card-label">学习笔记</p>
             <h3>Git 常用命令整理</h3>
             <p>整理日常开发中常用的 Git 命令，适合新手快速查阅。</p>
-            <a href="#" class="text-link">阅读全文</a>
+            <a class="text-link" href="#">阅读全文</a>
           </article>
+
           <article class="card blog-card">
-            <p class="date">建站记录</p>
+            <p class="card-label">建站记录</p>
             <h3>GitHub Pages 搭建个人博客</h3>
             <p>记录从创建仓库到发布静态页面的完整流程。</p>
-            <a href="#" class="text-link">阅读全文</a>
+            <a class="text-link" href="#">阅读全文</a>
           </article>
+
           <article class="card blog-card">
-            <p class="date">学习路线</p>
+            <p class="card-label">学习路线</p>
             <h3>AI 研发岗学习路线</h3>
             <p>梳理 AI 研发方向需要掌握的基础知识、工程能力和项目经验。</p>
-            <a href="#" class="text-link">阅读全文</a>
+            <a class="text-link" href="#">阅读全文</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 联系方式区域 -->
+    <!-- 联系方式区域：参考 HugoPlate 的 Call To Action 模块 -->
     <section id="contact" class="section">
       <div class="container">
-        <h2>联系方式</h2>
-        <div class="card contact-card">
-          <p>如果你对我的项目或研究方向感兴趣，欢迎通过以下方式联系我。</p>
-          <ul class="contact-list">
-            <li>邮箱：1545084294@qq.com</li>
-            <li>GitHub：<a href="#" class="text-link">https://github.com/zel-831</a></li>
-          </ul>
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>联系方式</h2>
+            <p>如果你对我的项目、研究方向或技术文章感兴趣，欢迎交流。</p>
+            <ul class="contact-list">
+              <li>邮箱：<a href="mailto:545084294@qq.com">545084294@qq.com</a></li>
+              <li>GitHub：<a href="https://github.com/zel-831" target="_blank" rel="noopener">https://github.com/zel-831</a></li>
+            </ul>
+          </div>
+          <div class="contact-image">
+            <img src="assets/images/call-to-action.png" alt="联系与协作插画">
+          </div>
         </div>
       </div>
     </section>
@@ -137,7 +245,10 @@
 
   <!-- 页脚 -->
   <footer class="site-footer">
-    <p>&copy; 2026 Your Name. All rights reserved.</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 一泠技术. All rights reserved.</p>
+      <a class="js-scroll" href="#home">返回首页</a>
+    </div>
   </footer>
 
   <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
