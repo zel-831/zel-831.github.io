@@ -292,6 +292,234 @@ h3 {
   margin: 0 auto;
 }
 
+/* 1024 小游戏 */
+.game-section {
+  background: var(--color-light);
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.game-copy {
+  max-width: 520px;
+}
+
+.game-copy p:last-child {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.game-shell {
+  width: min(100%, 500px);
+  justify-self: end;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.game-topbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 58px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.game-stat {
+  min-width: 0;
+  min-height: 64px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #f9fbff;
+}
+
+.game-stat span {
+  display: block;
+  color: var(--color-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.game-stat strong {
+  display: block;
+  overflow: hidden;
+  color: var(--color-heading);
+  font-size: 26px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.game-restart {
+  width: 58px;
+  min-height: 64px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: var(--color-heading);
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.game-restart:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.game-status {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  margin: 16px 0;
+  border-radius: 8px;
+  color: var(--color-heading);
+  background: var(--color-soft-blue);
+  font-weight: 700;
+  text-align: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background: #d9e2ef;
+  touch-action: none;
+}
+
+.game-tile {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  color: #1f2937;
+  background: rgba(255, 255, 255, 0.54);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.game-tile.tile-empty {
+  color: transparent;
+}
+
+.game-tile.tile-large {
+  font-size: 26px;
+}
+
+.game-tile[data-value="2"] {
+  background: #f9fafb;
+}
+
+.game-tile[data-value="4"] {
+  background: #e8f7f0;
+}
+
+.game-tile[data-value="8"] {
+  color: #ffffff;
+  background: #14b8a6;
+}
+
+.game-tile[data-value="16"] {
+  color: #ffffff;
+  background: #0ea5e9;
+}
+
+.game-tile[data-value="32"] {
+  color: #ffffff;
+  background: #6366f1;
+}
+
+.game-tile[data-value="64"] {
+  color: #ffffff;
+  background: #7c3aed;
+}
+
+.game-tile[data-value="128"] {
+  color: #ffffff;
+  background: #f59e0b;
+}
+
+.game-tile[data-value="256"] {
+  color: #ffffff;
+  background: #ef4444;
+}
+
+.game-tile[data-value="512"] {
+  color: #ffffff;
+  background: #0f172a;
+}
+
+.game-tile[data-value="1024"] {
+  color: #ffffff;
+  background: #16a34a;
+}
+
+.game-tile[data-value="2048"],
+.game-tile[data-value="4096"] {
+  color: #ffffff;
+  background: #111827;
+}
+
+.game-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 52px);
+  gap: 8px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.game-control {
+  width: 52px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-heading);
+  background: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.game-control:hover {
+  color: var(--color-primary);
+  border-color: rgba(37, 99, 235, 0.42);
+  transform: translateY(-2px);
+}
+
+.control-up {
+  grid-column: 2;
+}
+
+.control-left {
+  grid-column: 1;
+}
+
+.control-down {
+  grid-column: 2;
+}
+
+.control-right {
+  grid-column: 3;
+}
+
 /* 关于我 */
 .about-layout {
   display: grid;
@@ -579,8 +807,19 @@ h3 {
 
   .about-layout,
   .feature-item,
+  .game-layout,
   .contact-panel {
     grid-template-columns: 1fr;
+  }
+
+  .game-copy {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .game-shell {
+    justify-self: center;
   }
 
   .feature-reverse .feature-image,
@@ -630,6 +869,7 @@ h3 {
 
   .hero-subtitle,
   .section-heading p:last-child,
+  .game-copy p:last-child,
   .feature-content p {
     font-size: 16px;
   }
@@ -644,8 +884,45 @@ h3 {
 
   .about-card,
   .card,
+  .game-shell,
   .contact-panel {
     padding: 24px;
+  }
+
+  .game-layout {
+    gap: 34px;
+  }
+
+  .game-topbar {
+    grid-template-columns: 1fr 1fr 52px;
+    gap: 8px;
+  }
+
+  .game-stat {
+    min-height: 58px;
+    padding: 9px 10px;
+  }
+
+  .game-stat strong {
+    font-size: 22px;
+  }
+
+  .game-restart {
+    width: 52px;
+    min-height: 58px;
+  }
+
+  .game-board {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .game-tile {
+    font-size: 24px;
+  }
+
+  .game-tile.tile-large {
+    font-size: 21px;
   }
 
   .feature-list {

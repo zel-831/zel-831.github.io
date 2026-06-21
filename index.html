@@ -26,6 +26,7 @@
 
       <ul id="site-menu" class="nav-links">
         <li><a class="js-scroll" href="#home">首页</a></li>
+        <li><a class="js-scroll" href="#game">1024</a></li>
         <li><a class="js-scroll" href="#about">关于我</a></li>
         <li><a class="js-scroll" href="#projects">项目</a></li>
         <li><a class="js-scroll" href="#blog">博客</a></li>
@@ -48,13 +49,51 @@
             这里记录我的研究兴趣、项目实践和技术文章。
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary js-scroll" href="#projects">查看项目</a>
-            <a class="btn btn-outline js-scroll" href="#blog">阅读博客</a>
+            <a class="btn btn-primary js-scroll" href="#game">试玩 1024</a>
+            <a class="btn btn-outline js-scroll" href="#projects">查看项目</a>
           </div>
         </div>
 
         <div class="hero-visual" aria-label="个人主页插画">
           <img src="assets/images/banner.png" alt="桌面学习与开发插画" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- 1024 小游戏 -->
+    <section id="game" class="section game-section">
+      <div class="container game-layout">
+        <div class="game-copy">
+          <p class="eyebrow">Mini Game</p>
+          <h2>1024 小游戏</h2>
+          <p>
+            从 2 开始合并相同数字，向 1024 发起挑战。紧凑棋盘放在首页中段，
+            浏览项目之外也能快速玩一局。
+          </p>
+        </div>
+
+        <div class="game-shell" aria-label="1024 小游戏">
+          <div class="game-topbar">
+            <div class="game-stat">
+              <span>分数</span>
+              <strong id="game-score">0</strong>
+            </div>
+            <div class="game-stat">
+              <span>最高</span>
+              <strong id="game-best">0</strong>
+            </div>
+            <button class="game-restart" id="game-restart" type="button" aria-label="重新开始" title="重新开始">↻</button>
+          </div>
+
+          <p class="game-status" id="game-status" aria-live="polite">合成 1024</p>
+          <div class="game-board" id="game-board" role="grid" aria-label="1024 棋盘" tabindex="0"></div>
+
+          <div class="game-controls" aria-label="移动控制">
+            <button class="game-control control-up" type="button" data-move="up" aria-label="向上移动" title="向上">↑</button>
+            <button class="game-control control-left" type="button" data-move="left" aria-label="向左移动" title="向左">←</button>
+            <button class="game-control control-down" type="button" data-move="down" aria-label="向下移动" title="向下">↓</button>
+            <button class="game-control control-right" type="button" data-move="right" aria-label="向右移动" title="向右">→</button>
+          </div>
         </div>
       </div>
     </section>
